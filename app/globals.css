@@ -1,26 +1,147 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
+@custom-variant lamp-off (&:is(.lamp-off *));
+@custom-variant lamp-on (&:is(.lamp-on *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-cooper: "Cooper Hewitt", sans-serif;
+  --font-inter: var(--font-inter);
+  --font-heading: var(--font-inter), sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Forced Dark Mode / Monochrome Configuration */
+  --radius: 0.625rem;
+
+  /* Pure Black Background */
+  --background: oklch(0 0 0);
+
+  /* Zinc-200 Foreground (Off-white/Silver) */
+  --foreground: oklch(0.92 0.004 286.32);
+
+  /* Dark Zinc Cards/Surfaces */
+  --card: oklch(0.005 0 0);
+  /* Almost black */
+  --card-foreground: oklch(0.92 0.004 286.32);
+
+  --popover: oklch(0 0 0);
+  --popover-foreground: oklch(0.92 0.004 286.32);
+
+  /* Primary: Zinc-200 or White for contrast */
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0 0 0);
+
+  /* Secondary: Deep Zinc */
+  --secondary: oklch(0.141 0.005 285.823);
+  /* Zinc-900 */
+  --secondary-foreground: oklch(0.985 0 0);
+
+  /* Muted: Zinc-900 */
+  --muted: oklch(0.141 0.005 285.823);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  /* Zinc-400 */
+
+  /* Accent: Zinc-800/900 for hovers */
+  --accent: oklch(0.21 0.006 285.885);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  /* Default red, maybe keep? */
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+
+  /* Border and Input: Dark Zinc */
+  --border: oklch(0.21 0.006 285.885);
+  /* Zinc-800 */
+  --input: oklch(0.21 0.006 285.885);
+  --ring: oklch(0.92 0.004 286.32);
+  /* Focus ring */
+
+  --chart-1: oklch(1 0 0);
+  /* Monochrome charts? White */
+  --chart-2: oklch(0.8 0 0);
+  --chart-3: oklch(0.6 0 0);
+  --chart-4: oklch(0.4 0 0);
+  --chart-5: oklch(0.2 0 0);
+
+  --sidebar: oklch(0.02 0 0);
+  /* Slightly lighter than black */
+  --sidebar-foreground: oklch(0.92 0.004 286.32);
+  --sidebar-primary: oklch(0.985 0 0);
+  --sidebar-primary-foreground: oklch(0 0 0);
+  --sidebar-accent: oklch(0.141 0.005 285.823);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.21 0.006 285.885);
+  --sidebar-ring: oklch(0.92 0.004 286.32);
+}
+
+/* Ensure these apply even if .dark class is missing, or reinforce them */
+.dark {
+  --background: oklch(0 0 0);
+  --foreground: oklch(0.92 0.004 286.32);
+  /* ... copy others if needed, but :root is default now */
+}
+
+@layer utilities {
+  .glass {
+    /* Reduced heavy blur for performance */
+    @apply bg-black/40 backdrop-blur-sm border border-white/10 shadow-lg;
+  }
+
+  .glass-card {
+    /* Reduced heavy blur for performance */
+    @apply bg-zinc-950/50 backdrop-blur-sm border border-zinc-800/50 shadow-md text-zinc-100;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
