@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="space-y-8">
       {/* Header Section */}
-      <div className={cn("flex flex-col md:flex-row md:items-center justify-between gap-4 transition-opacity duration-1000 lamp-off:opacity-80")}>
+      <div className={cn("flex flex-col md:flex-row md:items-center justify-between gap-4 transition-opacity duration-1000")}>
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-white">Good Evening, {user.username}</h1>
           <p className="text-zinc-400 mt-1">Ready to conquer the night?</p>
@@ -60,7 +60,7 @@ export default function Home() {
       />
 
       {/* Main Content Area */}
-      <div className={cn("grid gap-4 md:grid-cols-2 lg:grid-cols-7 transition-opacity duration-1000 lamp-off:opacity-80")}>
+      <div className={cn("grid gap-4 md:grid-cols-2 lg:grid-cols-7 transition-opacity duration-1000")}>
 
         {/* Today's Schedule */}
         <GlassCard className="col-span-4 bg-zinc-950 border border-white/10 hover:bg-zinc-900" variant="default">

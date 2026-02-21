@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BeamsBackground } from "@/components/ui/beams-background";
+import Dither from "@/components/ui/dither";
 
 export default function PlatformLayout({
     children,
@@ -41,8 +42,41 @@ export default function PlatformLayout({
         <div className="relative min-h-screen">
             <PullChain />
             {/* Background Layer */}
-            <div className="fixed inset-0 z-0">
-                <BeamsBackground isDarkMode={!isLampOn} className="h-full w-full" />
+            <div className="fixed inset-0 z-0 bg-black">
+                <AnimatePresence>
+                    {!isLampOn ? (
+                        <motion.div
+                            key="light-bg"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            className="absolute inset-0"
+                        >
+                            <BeamsBackground isDarkMode={false} className="h-full w-full" />
+                        </motion.div>
+                    ) : (
+                        <motion.div
+                            key="dark-bg"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            className="absolute inset-0"
+                        >
+                            <Dither
+                                waveColor={[0.5, 0.5, 0.5]}
+                                disableAnimation={false}
+                                enableMouseInteraction
+                                mouseRadius={0.3}
+                                colorNum={4}
+                                waveAmplitude={0.3}
+                                waveFrequency={3}
+                                waveSpeed={0.05}
+                            />
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
 
             {/* Content Wrapper */}
@@ -57,7 +91,7 @@ export default function PlatformLayout({
                     )}
                 >
                     {/* Desktop Sidebar */}
-                    <div className={cn("transition-opacity duration-1000 lamp-off:opacity-80")}>
+                    <div className={cn("transition-opacity duration-1000")}>
                         <Sidebar />
                     </div>
 

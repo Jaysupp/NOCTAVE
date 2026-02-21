@@ -78,7 +78,7 @@ export default function SchedulePage() {
                 <h1 className="text-3xl font-bold tracking-tight text-white transition-colors duration-500">
                     AI Schedule Generator
                 </h1>
-                <p className="text-lg text-zinc-500 max-w-2xl">
+                <p className="text-lg text-zinc-300 max-w-2xl">
                     Let our chronobiology engine optimize your night. Input your tasks and sleep time,
                     and we'll build the perfect rhythm for your peak energy windows.
                 </p>

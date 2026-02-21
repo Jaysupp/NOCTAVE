@@ -10,7 +10,7 @@ export function GlassCard({ className, children, variant = 'default', ...props }
   return (
     <Card
       className={cn(
-        "glass-card border-none bg-zinc-900/40 backdrop-blur-sm transition-[transform,opacity,border-color,background-color] duration-300 will-change-transform", // Explicit transitions and reduced blur
+        "glass-card border-none bg-zinc-900/80 backdrop-blur-md transition-[transform,opacity,border-color,background-color] duration-300 will-change-transform", // Explicit transitions and increased blur for contrast
         variant === 'neo' && "border border-white/5 shadow-xl shadow-black/50 bg-gradient-to-br from-white/5 to-transparent",
         variant === 'ghost' && "bg-transparent border border-zinc-800/30",
         // Interactive hover effects by default for now, or we can add a prop. User asked for interactive, so let's making them feel alive.

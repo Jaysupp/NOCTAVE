@@ -144,4 +144,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  ::selection {
+    @apply bg-indigo-600/80 text-white;
+  }
 }

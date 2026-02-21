@@ -112,9 +112,9 @@ function Card({ item, dimmed, onHoverStart, onHoverEnd, isLampOn }: CardProps) {
     };
 
     // Determine the effective color based on the lamp state.
-    // Lamp off (Noctave Mode) -> Use original colors
-    // Lamp on -> Plain black/white monochrome
-    const effectiveColor = isLampOn ? "#ffffff" : item.color; // Using white for monochrome on dark bg, or adjust as needed.
+    // Lamp off (Noctave Mode) -> Use plain white monochrome
+    // Lamp on -> Use original colors
+    const effectiveColor = !isLampOn ? "#ffffff" : item.color; // Using white for monochrome on dark bg, or adjust as needed.
 
     return (
         <motion.div
@@ -125,7 +125,7 @@ function Card({ item, dimmed, onHoverStart, onHoverEnd, isLampOn }: CardProps) {
             className={cn(
                 "group relative flex flex-col gap-5 overflow-hidden rounded-2xl border p-6",
                 // Light
-                "border-zinc-800 bg-zinc-950/50 shadow-none", // Adjusted for app's consistent dark visual base
+                "border-zinc-800 bg-zinc-950/90 shadow-none", // Adjusted for app's consistent dark visual base
                 // Dark classes removed as our app manages custom dark/light, but keeping similar to user's provided structure
                 "transition-[border-color] duration-300",
                 "hover:border-zinc-700"

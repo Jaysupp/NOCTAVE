@@ -372,7 +372,7 @@ export default function SettingsPage() {
             </GlassCard>
 
             {/* Danger Zone */}
-            <GlassCard variant="ghost" className="border-red-900/20 bg-red-950/5 transition-all duration-500">
+            <GlassCard variant="ghost" className={cn("border-red-900/20 bg-red-950/5 transition-all duration-500", !isLampOn && "hover:bg-black/40")}>
                 <CardHeader>
                     <div className="flex items-center gap-2">
                         <Shield className="h-5 w-5 text-red-400" />

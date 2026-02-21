@@ -15,7 +15,8 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     // "When isLampOn is true: Transition back to the original" -> implies starting state might be true?
     // Or if "Night Sky" is the special mode (False), then default should probably be True (Standard Mode).
     // Default to false (Lamp Off / Noctave Mode) so the Black Hole background is visible by default.
-    const [isLampOn, setIsLampOn] = useState(false)
+    // Changing to true as per user request to always start the page from toggle on state
+    const [isLampOn, setIsLampOn] = useState(true)
 
     useEffect(() => {
         // Run once on mount to set initial class
