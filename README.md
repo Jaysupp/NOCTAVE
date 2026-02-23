@@ -1,37 +1,198 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌙 NOCTAVE
 
-## Getting Started
+A modern dark productivity dashboard designed for focused night sessions.
+Built with performance, smooth animations, and minimal design in mind.
 
-First, run the development server:
+🔗 Live Site: https://noctave.netlify.app
 
-```bash
+✨ Overview
+
+NOCTAVE is a sleek, dark-themed productivity dashboard built using Next.js App Router.
+It is designed to provide a distraction-free experience with smooth UI interactions, subtle animated backgrounds, and a modern glass-inspired interface.
+
+The project emphasizes:
+
+⚡ Performance-first design
+
+🎨 Minimal & modern UI
+
+🌊 Subtle animated wave background
+
+🧠 Focus-driven layout
+
+📱 Responsive design
+
+🚀 Tech Stack
+
+Framework: Next.js (App Router)
+
+Language: TypeScript
+
+Styling: CSS / Tailwind (if used)
+
+Font Optimization: next/font
+
+Deployment: Netlify
+
+📂 Project Structure
+/app
+  ├── page.tsx        # Main dashboard page
+  ├── layout.tsx      # Root layout
+  └── globals.css     # Global styles
+
+/public               # Static assets
+⚙️ Getting Started
+1️⃣ Clone the repository
+git clone <your-repo-url>
+cd noctave
+2️⃣ Install dependencies
+npm install
+# or
+yarn install
+# or
+pnpm install
+3️⃣ Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
+👉 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The app will auto-reload when you edit app/page.tsx.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🎨 Features
+🌊 Animated Wave Background
 
-## Learn More
+Subtle GPU-accelerated motion
 
-To learn more about Next.js, take a look at the following resources:
+Optimized to avoid full-screen repaints
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Respects prefers-reduced-motion
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📊 Dashboard Overview
 
-## Deploy on Vercel
+Focus time tracking
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Task completion status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# NOCTAVE
+Productivity efficiency
+
+Schedule breakdown
+
+Quick review notes
+
+🧭 Sidebar Navigation
+
+Smooth transform-based animation
+
+Performance-optimized toggle
+
+Lightweight transitions
+
+🌙 Dark Mode Design
+
+Modern dark palette
+
+High contrast typography
+
+Clean glass-style cards
+
+⚡ Performance Optimizations
+
+NOCTAVE is optimized to feel smooth and responsive:
+
+✅ Transform-only animations (no layout thrashing)
+
+✅ No transition: all
+
+✅ Reduced shadow blur cost
+
+✅ CSS variables for theme switching
+
+✅ Minimized re-renders
+
+✅ Lightweight background animation
+
+✅ Mobile-friendly layout
+
+🛠 Customization
+
+You can customize:
+
+Colors via CSS variables
+
+Background animation intensity
+
+Card shadow depth
+
+Typography scaling
+
+Dashboard widgets
+
+Main customization file:
+
+app/globals.css
+📦 Build for Production
+npm run build
+npm start
+🌍 Deployment
+
+The project is deployed on Netlify.
+
+To deploy your own version:
+
+Push your repository to GitHub
+
+Connect to Netlify
+
+Set build command:
+
+npm run build
+
+Publish directory:
+
+.next
+🧠 Design Philosophy
+
+NOCTAVE is built around:
+
+Minimal distraction
+
+Night-focused productivity
+
+Smooth interaction feedback
+
+Performance over visual excess
+
+Clean, modern UI language
+
+The goal is to create a dashboard that feels effortless to use.
+
+📈 Future Improvements
+
+User authentication
+
+Persistent task storage
+
+Analytics insights
+
+Custom themes
+
+Performance mode toggle
+
+Reduced motion mode toggle
+
+🤝 Contributing
+
+Contributions are welcome.
+
+Fork the repository
+
+Create a new branch
+
+Make your changes
+
+Submit a pull request
+
+📄 License
+
+MIT License
