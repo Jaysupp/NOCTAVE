@@ -54,7 +54,8 @@ pnpm install
 3️⃣ Run development server
 npm run dev
 
-Open:
+Open your browser:
+
 👉 http://localhost:3000
 
 The app will auto-reload when you edit app/page.tsx.
@@ -196,3 +197,5 @@ Submit a pull request
 📄 License
 
 MIT License
+
+🌙 Built with focus. Designed for the night.
