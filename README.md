@@ -1,201 +1,222 @@
-🌙 NOCTAVE
+# 🌙 NOCTAVE
 
-A modern dark productivity dashboard designed for focused night sessions.
-Built with performance, smooth animations, and minimal design in mind.
+A modern dark productivity dashboard designed for focused night sessions. Built with performance, smooth animations, and minimal design in mind.
 
 🔗 Live Site: https://noctave.netlify.app
 
-✨ Overview
+---
 
-NOCTAVE is a sleek, dark-themed productivity dashboard built using Next.js App Router.
-It is designed to provide a distraction-free experience with smooth UI interactions, subtle animated backgrounds, and a modern glass-inspired interface.
+## ✨ Overview
+
+NOCTAVE is a sleek, dark-themed productivity dashboard built using Next.js App Router. It is designed to provide a distraction-free experience with smooth UI interactions, subtle animated backgrounds, and a modern glass-inspired interface.
 
 The project emphasizes:
 
-⚡ Performance-first design
+- ⚡ Performance-first design  
+- 🎨 Minimal & modern UI  
+- 🌊 Subtle animated wave background  
+- 🧠 Focus-driven layout  
+- 📱 Responsive design  
 
-🎨 Minimal & modern UI
+---
 
-🌊 Subtle animated wave background
+## 🚀 Tech Stack
 
-🧠 Focus-driven layout
+- **Framework:** Next.js (App Router)  
+- **Language:** TypeScript  
+- **Styling:** CSS / Tailwind  
+- **Font Optimization:** next/font  
+- **Deployment:** Netlify  
 
-📱 Responsive design
+---
 
-🚀 Tech Stack
+## 📂 Project Structure
 
-Framework: Next.js (App Router)
-
-Language: TypeScript
-
-Styling: CSS / Tailwind (if used)
-
-Font Optimization: next/font
-
-Deployment: Netlify
-
-📂 Project Structure
+```bash
 /app
-  ├── page.tsx        # Main dashboard page
-  ├── layout.tsx      # Root layout
-  └── globals.css     # Global styles
+├── page.tsx       # Main dashboard page
+├── layout.tsx     # Root layout
+└── globals.css    # Global styles
 
-/public               # Static assets
-⚙️ Getting Started
-1️⃣ Clone the repository
-git clone <your-repo-url>
+/public             # Static assets
+```
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/noctave.git
 cd noctave
-2️⃣ Install dependencies
+```
+
+### 2️⃣ Install dependencies
+
+```bash
 npm install
-# or
+```
+
+or
+
+```bash
 yarn install
-# or
+```
+
+or
+
+```bash
 pnpm install
-3️⃣ Run development server
+```
+
+### 3️⃣ Run development server
+
+```bash
 npm run dev
+```
 
 Open your browser:
 
 👉 http://localhost:3000
 
-The app will auto-reload when you edit app/page.tsx.
+The app will auto-reload when you edit `app/page.tsx`.
 
-🎨 Features
-🌊 Animated Wave Background
+---
 
-Subtle GPU-accelerated motion
+## 🎨 Features
 
-Optimized to avoid full-screen repaints
+### 🌊 Animated Wave Background
 
-Respects prefers-reduced-motion
+- Subtle GPU-accelerated motion  
+- Optimized to avoid full-screen repaints  
+- Respects prefers-reduced-motion  
 
-📊 Dashboard Overview
+### 📊 Dashboard Overview
 
-Focus time tracking
+- Focus time tracking  
+- Task completion status  
+- Productivity efficiency  
+- Schedule breakdown  
+- Quick review notes  
 
-Task completion status
+### 🧭 Sidebar Navigation
 
-Productivity efficiency
+- Smooth transform-based animation  
+- Performance-optimized toggle  
+- Lightweight transitions  
 
-Schedule breakdown
+### 🌙 Dark Mode Design
 
-Quick review notes
+- Modern dark palette  
+- High contrast typography  
+- Clean glass-style cards  
 
-🧭 Sidebar Navigation
+---
 
-Smooth transform-based animation
-
-Performance-optimized toggle
-
-Lightweight transitions
-
-🌙 Dark Mode Design
-
-Modern dark palette
-
-High contrast typography
-
-Clean glass-style cards
-
-⚡ Performance Optimizations
+## ⚡ Performance Optimizations
 
 NOCTAVE is optimized to feel smooth and responsive:
 
-✅ Transform-only animations (no layout thrashing)
+- ✅ Transform-only animations (no layout thrashing)  
+- ✅ No `transition: all`  
+- ✅ Reduced shadow blur cost  
+- ✅ CSS variables for theme switching  
+- ✅ Minimized re-renders  
+- ✅ Lightweight background animation  
+- ✅ Mobile-friendly layout  
 
-✅ No transition: all
+---
 
-✅ Reduced shadow blur cost
-
-✅ CSS variables for theme switching
-
-✅ Minimized re-renders
-
-✅ Lightweight background animation
-
-✅ Mobile-friendly layout
-
-🛠 Customization
+## 🛠 Customization
 
 You can customize:
 
-Colors via CSS variables
-
-Background animation intensity
-
-Card shadow depth
-
-Typography scaling
-
-Dashboard widgets
+- Colors via CSS variables  
+- Background animation intensity  
+- Card shadow depth  
+- Typography scaling  
+- Dashboard widgets  
 
 Main customization file:
 
+```bash
 app/globals.css
-📦 Build for Production
+```
+
+---
+
+## 📦 Build for Production
+
+```bash
 npm run build
 npm start
-🌍 Deployment
+```
+
+---
+
+## 🌍 Deployment
 
 The project is deployed on Netlify.
 
 To deploy your own version:
 
-Push your repository to GitHub
+1. Push your repository to GitHub  
+2. Connect repository to Netlify  
+3. Set build command:
 
-Connect to Netlify
-
-Set build command:
-
+```bash
 npm run build
+```
 
-Publish directory:
+4. Set publish directory:
 
+```bash
 .next
-🧠 Design Philosophy
+```
+
+---
+
+## 🧠 Design Philosophy
 
 NOCTAVE is built around:
 
-Minimal distraction
-
-Night-focused productivity
-
-Smooth interaction feedback
-
-Performance over visual excess
-
-Clean, modern UI language
+- Minimal distraction  
+- Night-focused productivity  
+- Smooth interaction feedback  
+- Performance over visual excess  
+- Clean, modern UI language  
 
 The goal is to create a dashboard that feels effortless to use.
 
-📈 Future Improvements
+---
 
-User authentication
+## 📈 Future Improvements
 
-Persistent task storage
+- User authentication  
+- Persistent task storage  
+- Analytics insights  
+- Custom themes  
+- Performance mode toggle  
+- Reduced motion mode toggle  
 
-Analytics insights
+---
 
-Custom themes
-
-Performance mode toggle
-
-Reduced motion mode toggle
-
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome.
 
-Fork the repository
+1. Fork the repository  
+2. Create a new branch  
+3. Make your changes  
+4. Submit a pull request  
 
-Create a new branch
+---
 
-Make your changes
-
-Submit a pull request
-
-📄 License
+## 📄 License
 
 MIT License
 
-🌙 Built with focus. Designed for the night.
+---
+
+## 🌙 Built with focus. Designed for the night.
