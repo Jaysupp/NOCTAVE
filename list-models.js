@@ -1,7 +1,8 @@
+require('dotenv').config({ path: '.env.local' });
 const { GoogleGenAI } = require('@google/genai');
 
 async function listModels() {
-    const ai = new GoogleGenAI({ apiKey: 'AIzaSyDt7m9L7ylJDcC34ZJJY8SLo1JVNvb7MGk' });
+    const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
 
     try {
         console.log('Listing models...');
