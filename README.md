@@ -34,13 +34,19 @@ The project emphasizes:
 
 ```bash
 /app
-├── page.tsx       # Main dashboard page
-├── layout.tsx     # Root layout
-└── globals.css    # Global styles
+├── (platform)/          # Route group for main platform pages
+│   ├── /analytics       # Analytics page
+│   ├── /dashboard       # Main dashboard
+│   ├── /schedule        # Schedule and planning
+│   ├── /settings        # User settings
+│   └── /tasks           # Task management
+│
+├── layout.tsx           # Root layout
+├── page.tsx             # Landing / entry page
+└── globals.css          # Global styles
 
-/public             # Static assets
+/public                  # Static assets
 ```
-
 ---
 
 ## ⚙️ Getting Started
